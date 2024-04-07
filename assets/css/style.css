@@ -1751,7 +1751,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   /**
    * BLOG
    */
-
+k
   .blog-banner-box { height: 230px; }
 
 }
@@ -1880,3 +1880,77 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+
+/* 模态框背景 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+/* 模态框内容 */
+.modal-content {
+  background-color: hsla(0, 0%, 100%, 0.1);
+  margin: 1vh auto; /* 顶部和底部保留一些空间 */
+  padding: 1%; /* 留出一点边距 */
+  border: 1px solid #888;
+  width: 80vw; /* 视口宽度的80% */
+  /*height: auto; */
+  max-height: 90vh; /* 限制最大高度，避免超出屏幕 */
+  margin: 10% auto; /* 上下外边距自动，以垂直居中 */
+  overflow-y: auto; /* 如果内容过高，则显示滚动条 */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  overflow-y: hidden; /* 这将只隐藏垂直滚动条 */
+  overflow-x: hidden; /* 这将只隐藏水平滚动条 */
+}
+
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 适应内容的iframe */
+.modal-content iframe {
+  width: 100%; /* iframe 宽度填满容器 */
+  height: 100%; /* iframe 高度填满容器，可以根据实际内容调整 */
+  border: none;
+}
+
+@media (max-height: 800px) {
+  .modal-content {
+    max-height: 95vh;
+  }
+  .modal-content iframe {
+    height: 90vh;
+  }
+}
+
+.blog-meta {
+  display: grid;
+  grid-template-columns: 1fr; /* 单列布局 */
+  grid-gap: 2px; /* 格间距 */
+}
+
+
+
+

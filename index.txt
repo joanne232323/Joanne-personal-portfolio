@@ -2,8 +2,8 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
+alt = Joanne Wang
+Joanne Wang 王婕恩
 Web developer
 
 Show Contacts
